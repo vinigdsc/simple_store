@@ -3,3 +3,141 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-family: sans-serif;
+  background: #616161;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 15vh;
+
+  background: #090266;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+nav {
+  max-width: 900px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  border: none;
+  height: 3rem;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #6e4f8d;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  font: inherit;
+  transition: 0.5s;
+}
+
+button:hover {
+  background: #7607e6;
+  color: rgba(255, 255, 255, 1);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.logo-bold {
+  font-weight: bold;
+}
+
+.nav-bar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 50%;
+}
+
+.nav-bar-total {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.nav-bar-total-quantity {
+  font-size: 1rem;
+}
+
+.nav-bar-total-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.clean-btn {
+  max-width: 8rem;
+}
+
+main {
+  margin-top: 20vh;
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-section {
+  max-width: 900px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: black;
+  background: white;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 2rem;
+  height: 100%;
+  border-radius: 0.75rem;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+}
+
+.card-logo {
+  max-width: 400px;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+@media (max-width: 1150px) {
+  .products-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .products-section {
+    grid-template-columns: 1fr;
+  }
+}

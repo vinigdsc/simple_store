@@ -3,9 +3,9 @@ import React from "react";
 const Item = () => {
   return (
     <li>
-      <h2>Produto1</h2>
-      <span>R$ 10</span>
-      <button>REMOVER</button>
+      <h2 className="list-title">Produto1</h2>
+      <span className="list-price">R$ 10</span>
+      <button className="remove-btn">REMOVER</button>
     </li>
   );
 };

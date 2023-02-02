@@ -45,6 +45,7 @@ button {
   color: rgba(255, 255, 255, 0.7);
   font: inherit;
   transition: 0.5s;
+  outline: none;
 }
 
 button:hover {
@@ -103,6 +104,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.5rem;
+  padding-bottom: 3rem;
 }
 
 .card {
@@ -131,13 +133,77 @@ main {
   margin: 1rem 0;
 }
 
+footer {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ebebeb;
+  color: black;
+}
+
 @media (max-width: 1150px) {
   .products-section {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+ul {
+  max-width: 900px;
+  width: 90%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+li {
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+  background: white;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.remove-btn {
+  border: 3px solid #7607e6;
+  background: transparent;
+  color: #7607e6;
+  font-weight: bold;
+}
+
 @media (max-width: 700px) {
   .products-section {
     grid-template-columns: 1fr;
+  }
+  .nav-bar-total-quantity {
+    font-size: 0.5rem;
+  }
+  .nav-bar-total-price {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .logo {
+    font-size: 1rem;
+  }
+  .nav-bar-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 70%;
+  }
+  .list-title {
+    font-size: 1rem;
+  }
+
+  .list-price {
+    font-size: 0.9rem;
+  }
+
+  .remove-btn {
+    font-size: 0.75rem;
   }
 }

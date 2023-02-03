@@ -1,12 +1,17 @@
 import React from "react";
+import { Product } from "../CartItems";
 
-const Cards = () => {
+const Cards = ({ img, title, price, handleAddItemToCart }: Product) => {
   return (
     <div className="card">
-      <img className="card-logo" src="playstation.png" alt="" />
-      <h1 className="card-title">Produto 1</h1>
+      <img className="card-logo" src={img} alt="" />
+      <h1 className="card-title">
+        {title} <br /> R$ {price}
+      </h1>
       <div>
-        <button>ADICIONAR</button>
+        <button onClick={() => handleAddItemToCart(img, title, price)}>
+          ADICIONAR
+        </button>
       </div>
     </div>
   );

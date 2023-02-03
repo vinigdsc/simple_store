@@ -1,0 +1,4 @@
+
+- Design (x)
+- Components () -- Arrumar css do global.css para cada componente
+- State () -- fazer o estado ao inves do CartItems no index para todos componentes ter acesso a ele 

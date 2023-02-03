@@ -1,7 +1,9 @@
-import React from "react";
-import { Product } from "../CartItems";
+import React, { useContext } from "react";
 
-const Cards = ({ img, title, price, handleAddItemToCart }: Product) => {
+import { CartContext, Product } from "../../../contexts/CartContext";
+
+const Cards = ({ img, title, price }: Product) => {
+  const { handleAddItemToCart }: any = useContext(CartContext);
   return (
     <div className="card">
       <img className="card-logo" src={img} alt="" />

@@ -1,18 +1,14 @@
-import React from "react";
+import { CartContext } from "../../../contexts/CartContext";
+import React, { useContext } from "react";
 
 type ItemType = {
   name: string;
   price: number;
   itemIndex: number;
-  handleRemoveItemFromCart: Function;
 };
 
-const Item = ({
-  name,
-  price,
-  itemIndex,
-  handleRemoveItemFromCart,
-}: ItemType) => {
+const Item = ({ name, price, itemIndex }: ItemType) => {
+  const { handleRemoveItemFromCart }: any = useContext(CartContext);
   return (
     <li>
       <h2 className="list-title">{name}</h2>

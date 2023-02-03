@@ -1,18 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import Logo from "../Logo";
+import Link from "next/link";
+import { CartContext } from "../../../contexts/CartContext";
 
-type Product = {
-  price: number;
-};
+const NavBar = () => {
+  const { cart, clearCart }: any = useContext(CartContext);
 
-type CurrentCart = {
-  cart: Product[];
-  price?: number;
-  clearCart: Function;
-};
-
-const NavBar = ({ cart, clearCart }: CurrentCart) => {
-  const totalPrice = cart.reduce((acc, current) => acc + current.price, 0);
+  const totalPrice = cart.reduce(
+    (acc: number, current: any) => acc + current.price,
+    0
+  );
 
   return (
     <header>
@@ -26,8 +23,12 @@ const NavBar = ({ cart, clearCart }: CurrentCart) => {
             <span className="nav-bar-total-price">R$ {totalPrice}</span>
           </div>
 
+          <Link href={"/buy"}>
+            <button>Comprar</button>
+          </Link>
+
           <button className="clean-btn" onClick={() => clearCart()}>
-            limpar
+            Limpar Carrinho
           </button>
         </div>
       </nav>

@@ -1,32 +1,18 @@
 import Item from "@/components/Item";
-import React from "react";
+import { CartContext } from "../../../contexts/CartContext";
+import React, { useContext } from "react";
 
-export type Product = {
-  title: string;
-  price: number;
-  img?: string;
-  handleAddItemToCart: Function;
-  name: string;
-};
-
-type Cart = Product[];
-
-export type CartItemsProps = {
-  cart: Cart;
-  handleRemoveItemFromCart: Function;
-};
-
-const CartItems = ({ cart, handleRemoveItemFromCart }: CartItemsProps) => {
+const CartItems = () => {
+  const { cart }: any = useContext(CartContext);
   return (
     <footer>
       <ul>
-        {cart.map((cartItem, index) => (
+        {cart.map((cartItem: any, index: number) => (
           <Item
             key={index}
             itemIndex={index}
             name={cartItem.name}
             price={cartItem.price}
-            handleRemoveItemFromCart={handleRemoveItemFromCart}
           />
         ))}
         {/* percorrer o cart e para cada cartItem vai fazer 1 Item */}

@@ -22,10 +22,11 @@ const NavBar = () => {
             </span>
             <span className="nav-bar-total-price">R$ {totalPrice}</span>
           </div>
-
-          <Link href={"/buy"}>
-            <button>Comprar</button>
-          </Link>
+          {cart.length > 0 && (
+            <Link href={"/buy"}>
+              <button>Comprar</button>
+            </Link>
+          )}
 
           <button className="clean-btn" onClick={() => clearCart()}>
             Limpar Carrinho

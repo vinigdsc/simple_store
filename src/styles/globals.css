@@ -32,6 +32,12 @@ nav {
   justify-content: space-between;
 }
 
+.main-section {
+  margin-top: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 button {
   border: none;
   height: 3rem;

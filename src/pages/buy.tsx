@@ -34,7 +34,6 @@ const Buy = () => {
               <h1 className="card-title">
                 {cart.name} <br /> R$ {cart.price}
               </h1>
-              <div></div>
             </div>
           ))}
         </section>

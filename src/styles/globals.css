@@ -113,6 +113,14 @@ main {
   padding-bottom: 3rem;
 }
 
+.small-section {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
 .card {
   display: flex;
   align-items: center;
@@ -133,10 +141,21 @@ main {
   max-height: 250px;
   object-fit: cover;
 }
+.small-logo {
+  max-width: 200;
+  max-height: 175px;
+  object-fit: cover;
+}
 
 .card-title {
   font-size: 1rem;
   margin: 1rem 0;
+}
+
+.small-title {
+  font-size: 1rem;
+  margin: 1rem 0;
+  color: black;
 }
 
 footer {

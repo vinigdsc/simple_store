@@ -22,6 +22,7 @@ const NavBar = () => {
         <Logo />
         <div className="nav-bar-actions">
           <Popup
+            className="popup-overlay"
             trigger={
               <button className="button">
                 <NavBarTotal />

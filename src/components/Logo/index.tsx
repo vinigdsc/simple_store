@@ -2,9 +2,11 @@ import React from "react";
 
 const Logo = () => {
   return (
-    <h2 className="logo">
-      PRODU<span className="logo-bold">TOS</span>
-    </h2>
+    <div className="logo-container">
+      <h2 className="logo">
+        web<span className="logo-bold">STORE</span>
+      </h2>
+    </div>
   );
 };
 

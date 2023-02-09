@@ -17,7 +17,7 @@ header {
   width: 100vw;
   height: 15vh;
 
-  background: #090266;
+  background: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,6 +66,13 @@ button:hover {
 
 .logo-bold {
   font-weight: bold;
+  color: rgba(118, 7, 230, 1);
+}
+.logo-container {
+  cursor: pointer;
+}
+.logo-container:hover {
+  text-shadow: 0px 0px 10px rgb(128, 0, 255, 1);
 }
 
 .nav-bar-actions {
@@ -166,7 +173,9 @@ footer {
   background: #ebebeb;
   color: black;
 }
+
 .popup-content {
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   gap: 20px;

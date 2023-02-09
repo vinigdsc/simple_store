@@ -166,6 +166,12 @@ footer {
   background: #ebebeb;
   color: black;
 }
+.popup-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: black;
+}
 
 @media (max-width: 1150px) {
   .products-section {
@@ -198,6 +204,12 @@ li {
   background: transparent;
   color: #7607e6;
   font-weight: bold;
+}
+.popup-content {
+  margin: auto;
+  background: rgb(255, 255, 255);
+  width: 50%;
+  padding: 5px;
 }
 
 @media (max-width: 700px) {

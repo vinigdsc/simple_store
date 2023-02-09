@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import Logo from "@/components/Logo";
 import { CartContext } from "../../contexts/CartContext";
-import Cards from "@/components/Cards";
 import Link from "next/link";
 
 const Buy = () => {
   const { cart }: any = useContext(CartContext);
+  const { handleBackButton }: any = useContext(CartContext);
+
   const totalPrice = cart.reduce(
     (acc: number, current: any) => acc + current.price,
     0
@@ -16,7 +16,7 @@ const Buy = () => {
       <header>
         <nav>
           <Link href="/">
-            <button>Voltar</button>
+            <button onClick={handleBackButton}>Voltar</button>
           </Link>
           <div className="nav-bar-actions">
             <div className="nav-bar-total"></div>

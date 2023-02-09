@@ -18,6 +18,11 @@ export type CartItemsProps = {
 
 export const CartProvider = ({ children }: any) => {
   const [cart, setCart] = useState<any>([]);
+
+  function handleBackButton() {
+    window.location.reload;
+    setCart([]);
+  }
   function handleAddItemToCart(url: string, name: string, price: number) {
     const itemObject = { url, name, price };
 
@@ -38,7 +43,13 @@ export const CartProvider = ({ children }: any) => {
 
   return (
     <CartContext.Provider
-      value={{ cart, handleAddItemToCart, handleRemoveItemFromCart, clearCart }}
+      value={{
+        cart,
+        handleAddItemToCart,
+        handleRemoveItemFromCart,
+        clearCart,
+        handleBackButton,
+      }}
     >
       {children}
     </CartContext.Provider>

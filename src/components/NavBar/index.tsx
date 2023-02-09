@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useRef } from "react";
 import Logo from "../Logo";
 import Link from "next/link";
 import { CartContext } from "../../../contexts/CartContext";
@@ -13,6 +13,8 @@ const NavBar = () => {
     (acc: number, current: any) => acc + current.price,
     0
   );
+  const ref: any = useRef();
+  const close = () => ref.current.close();
 
   return (
     <header>
@@ -41,9 +43,24 @@ const NavBar = () => {
             </span>
           </Popup>
           {cart.length > 0 && (
-            <Link href={"/buy"}>
-              <button>Comprar</button>
-            </Link>
+            <>
+              <Popup
+                trigger={<button className="button">Comprar</button>}
+                modal
+                ref={ref}
+              >
+                <h1>
+                  Tem certeza que deseja comprar {cart.length} itens no valor de
+                  {" " + totalPrice} reais?
+                </h1>
+                <div className="popup-content">
+                  <Link href={"/buy"}>
+                    <button>Sim</button>
+                  </Link>
+                  <button onClick={close}>Voltar</button>
+                </div>
+              </Popup>
+            </>
           )}
 
           <button className="clean-btn" onClick={() => clearCart()}>
